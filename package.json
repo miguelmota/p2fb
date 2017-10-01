@@ -48,6 +48,7 @@
     "node": ">=7"
   },
   "dependencies": {
+    "minimist": "^1.2.0",
     "moment": "^2.18.1",
     "pify": "^3.0.0",
     "request": "^2.83.0",

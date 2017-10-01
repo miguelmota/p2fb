@@ -3,7 +3,7 @@ const parseString = require('xml2js').parseString
 const pify = require('pify')
 const moment = require('moment')
 
-async function transform(podcastUrl) {
+async function transform(podcastUrl, count) {
   if (typeof podcastUrl !== 'string') {
     return []
   }
@@ -14,7 +14,12 @@ async function transform(podcastUrl) {
     const { channel } = result.rss
     const { item: items } = channel[0]
 
-    const flashBriefingJson = items.map(item => {
+    // if 0 or undefined
+    if (!count) {
+      count = items.length
+    }
+
+    const flashBriefingJson = items.slice(0, count).map(item => {
       const guid = item.guid[0]._
       const id = `urn:guid:${guid}`
       const date = moment(item.pubDate[0], 'ddd, DD MMM HH:mm:ss').format(`YYYY-MM-DD[T]HH:mm:ss[.0Z]`)

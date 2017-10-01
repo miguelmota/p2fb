@@ -10,7 +10,7 @@ npm install p2fb
 
 ## Usage
 
-- **p2fb**(string podcastUrl) -> {Promise}
+- **p2fb**(string podcastUrl, [number count]) -> {Promise}
 
 
 ### Example
@@ -44,13 +44,17 @@ npm install -g p2fb
 ## Usage
 
 ```bash
-$ p2fb {podcast_feed_url}
+$ p2fb {podcast_feed_url} [options]
 ```
+
+- options
+
+  - **-c**, **--count** = {number}
 
 ### Example
 
 ```bash
-$ p2fb https://dailycrypto.io/feed/podcast
+$ p2fb https://dailycrypto.io/feed/podcast -c 2
 
 [
   {

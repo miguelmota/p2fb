@@ -1,6 +1,6 @@
 {
   "name": "p2fb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate a JSON Alexa Flash Briefing skill feed from an iTunes podcast XML feed URL.",
   "bin": {
     "p2fb": "bin/p2fb"
@@ -42,9 +42,7 @@
     "url": "https://github.com/miguelmota/p2fb/issues"
   },
   "homepage": "https://github.com/miguelmota/p2fb",
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "preferGlobal": false,
   "engines": {
     "node": ">=7"
@@ -52,6 +50,7 @@
   "dependencies": {
     "moment": "^2.18.1",
     "pify": "^3.0.0",
+    "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "xml2js": "^0.4.19"
   }

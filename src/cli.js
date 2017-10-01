@@ -10,7 +10,7 @@ async function main() {
 
   try {
     const result = await generator(url)
-    console.log(result)
+    console.log(JSON.stringify(result, null, 2))
   } catch (error) {
     console.error(error)
   }

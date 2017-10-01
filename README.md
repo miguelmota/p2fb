@@ -12,7 +12,9 @@ npm install p2fb
 
 - **p2fb**(string podcastUrl, [number count]) -> {Promise}
 
-Podcast feed URL is required. Count option limits the number of items to return in flash briefing JSON feed.
+  - podcastUrl is required.
+
+  - count option limits the number of items to return in flash briefing JSON feed.
 
 
 ### Example

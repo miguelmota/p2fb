@@ -1,6 +1,6 @@
 # Podcast to Flash Briefing
 
-> Generate a JSON [Alexa Flash Briefing](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/flash-briefing-skill-api-feed-reference) skill feed from an [iTunes podcast](http://itunespartner.apple.com/en/podcasts/overview) XML feed URL.
+> Generate an [Alexa Flash Briefing](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/flash-briefing-skill-api-feed-reference) skill JSON feed from an [iTunes podcast](http://itunespartner.apple.com/en/podcasts/overview) XML feed URL.
 
 # Install
 
@@ -11,6 +11,8 @@ npm install p2fb
 ## Usage
 
 - **p2fb**(string podcastUrl, [number count]) -> {Promise}
+
+Podcast feed URL is required. Count option limits the number of items to return in flash briefing JSON feed.
 
 
 ### Example

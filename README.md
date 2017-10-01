@@ -10,7 +10,7 @@ npm install p2fb
 
 ## Usage
 
-- **p2fb(string podcastUrl)** : Promise
+- **p2fb**(string podcastUrl) -> {Promise}
 
 
 ### Example
@@ -63,6 +63,8 @@ $ p2fb https://dailycrypto.io/feed/podcast
 # Resources
 
 - [Flash Briefing Skill API Feed Reference](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/flash-briefing-skill-api-feed-reference)
+
+- [iTunes Connect](http://itunespartner.apple.com/en/podcasts/overview)
 
 # License
 

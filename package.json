@@ -1,6 +1,6 @@
 {
   "name": "p2fb",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate an  Alexa Flash Briefing skill JSON feed from an iTunes podcast XML feed URL.",
   "bin": {
     "p2fb": "bin/p2fb"

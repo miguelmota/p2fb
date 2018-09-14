@@ -20,7 +20,7 @@ async function transform(podcastUrl, count) {
     }
 
     const flashBriefingJson = items.slice(0, count).map(item => {
-      const guid = item.guid[0]._
+      const guid = item.guid[0]._ || item.guid[0] || Math.floor(Math.random() *  m);
       const id = `urn:guid:${guid}`
       const date = moment(item.pubDate[0], 'ddd, DD MMM HH:mm:ss').format(`YYYY-MM-DD[T]HH:mm:ss[.0Z]`)
       const title = item.title[0]
@@ -31,7 +31,7 @@ async function transform(podcastUrl, count) {
         uid: id,
         updateDate: date,
         titleText: title,
-        mainText: '',
+        mainText: '', // remains blank for audio flash briefings
         streamUrl: audioUrl,
         redirectionUrl: link
       }

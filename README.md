@@ -22,18 +22,23 @@ npm install p2fb
 ```javascript
 const p2fb = require('p2fb')
 
-const podcastUrl = 'https://dailycrypto.io/feed/podcast'
+const podcastUrl = 'https://thisweekincrypto.co/feed/podcast'
 const flashBriefingJson = await p2fb(podcastUrl)
 
 console.log(flashBriefingJson)
 
 /*
-[ { uid: 'urn:guid:https://dailycrypto.io/?p=177',
-    updateDate: '2017-09-20T20:11:20.0Z',
-    titleText: 'Daily Crypto 09-19-2017',
-    mainText: '',
-    streamUrl: 'https://media.blubrry.com/dailycrypto/content.blubrry.com/dailycrypto/Daily_Crypto_09-19-2017.mp3',
-    redirectionUrl: 'https://dailycrypto.io/2017/09/19/daily-crypto-09-19-2017/' }, ... ]
+[
+  {
+    "uid": "urn:guid:http://www.blubrry.com/ostlive/36405839/",
+    "updateDate": "2018-08-21T20:59:00.0Z",
+    "titleText": "Welcome to OST LIVE (Trailer)",
+    "mainText": "",
+    "streamUrl": "https://media.blubrry.com/ostlive/content.blubrry.com/ostlive/ost_live_ep_000.mp3",
+    "redirectionUrl": "https://www.blubrry.com/ostlive/36405839/welcome-to-ost-live-trailer/"
+  },
+  ...
+]
 */
 ```
 
@@ -58,17 +63,15 @@ $ p2fb {podcast_feed_url} [options]
 ### Example
 
 ```bash
-$ p2fb https://dailycrypto.io/feed/podcast -c 2
+$ p2fb https://thisweekincrypto.co/feed/podcast -c 2
 
 [
-  {
-    "uid": "urn:guid:https://dailycrypto.io/?p=177",
-    "updateDate": "2017-09-20T20:11:20.0Z",
-    "titleText": "Daily Crypto 09-19-2017",
-    "mainText": "",
-    "streamUrl": "https://media.blubrry.com/dailycrypto/content.blubrry.com/dailycrypto/Daily_Crypto_09-19-2017.mp3",
-    "redirectionUrl": "https://dailycrypto.io/2017/09/19/daily-crypto-09-19-2017/"
-  },
+  "uid": "urn:guid:http://www.blubrry.com/ostlive/36423907/",
+  "updateDate": "2018-08-22T20:37:36.0Z",
+  "titleText": "What is Simple Token (OST)? An Overview With CEO Jason Goldberg",
+  "mainText": "",
+  "streamUrl": "https://media.blubrry.com/ostlive/content.blubrry.com/ostlive/ost_live_ep_001.mp3",
+  "redirectionUrl": "https://www.blubrry.com/ostlive/36423907/what-is-simple-token-ost-an-overview-with-ceo-jason-goldberg/"
   ...
 ]
 ```
